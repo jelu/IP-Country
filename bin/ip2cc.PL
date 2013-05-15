@@ -83,7 +83,7 @@ sub getRevDate
 {
     my $reg = IP::Country->new();
     my $tm = gmtime($reg->db_time());
-    print "\n  IP::Country modules (v$VERSION)\n  Copyright (c) 2002-05 Nigel Wetters Gourlay\n";
+    print "\n  IP::Country modules (v$VERSION)\n  Copyright (c) 2002-13 Nigel Wetters Gourlay\n";
     print "  Database updated $tm\n\n";
 }
 

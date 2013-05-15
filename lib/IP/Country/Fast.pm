@@ -29,7 +29,7 @@ my @dtoc;
     for (my $i = 0; $i <= 255; $i++){
 	$dtoc[$i] = substr(pack('N',$i),3,1);
     }
-    (my $module_dir = $INC{'IP/Country/Fast.pm'}) =~ s/\.pm$//;
+    (my $module_dir = __FILE__) =~ s/\.pm$//;
 
     local $/;   # set it so <> reads all the file at once
 

@@ -4,7 +4,7 @@ use warnings;
 use Socket qw ( inet_aton );
 
 use vars qw ( $VERSION );
-$VERSION = '604.001'; # APR 2006, version 0.01
+$VERSION = '1305.001'; # MAY 2013, version 0.01
 
 my $singleton = undef;
 my $ip_db;
@@ -28,7 +28,7 @@ my @dtoc;
     for (my $i = 0; $i <= 255; $i++){
 	$dtoc[$i] = substr(pack('N',$i),3,1);
     }
-    (my $module_dir = $INC{'IP/Authority.pm'}) =~ s/\.pm$//;
+    (my $module_dir = __FILE__) =~ s/\.pm$//;
 
     local $/;   # set it so <> reads all the file at once
 
