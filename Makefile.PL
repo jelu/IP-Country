@@ -1,6 +1,6 @@
 # A template for Makefile.PL used by Arena Networks.
 # - Set the $PACKAGE variable to the name of your module.
-# - Set $LAST_API_CHANGE to reflect the last version you changed the API 
+# - Set $LAST_API_CHANGE to reflect the last version you changed the API
 #   of your module.
 # - Fill in your dependencies in PREREQ_PM
 # Alternatively, you can say the hell with this and use h2xs.
@@ -30,10 +30,9 @@ unless ($@) { # Make sure we did find the module.
 WriteMakefile(
 	      NAME          => $PACKAGE,
 	      VERSION_FROM  => "lib/$PACKAGE_FILE.pm", # finds $VERSION
-	      PREREQ_PM     => { 'Geography::Countries' },
+	      PREREQ_PM     => { 'Geography::Countries' => 0 },
 	      AUTHOR        => 'Nigel Wetters Gourlay <nwetters@cpan.org>',
 	      ABSTRACT_FROM => "lib/$PACKAGE_FILE.pm",
 	      PL_FILES      => { 'bin/ip2cc.PL' => 'bin/ip2cc' },
 	      EXE_FILES     => ['bin/ip2cc']
 	      );
-
